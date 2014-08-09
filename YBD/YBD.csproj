@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9B05C6B-13E8-49F8-B03F-1AF01D6C6905}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>YBD</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>YBD</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="RootViewController.cs" />
+    <Compile Include="RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailViewController.cs" />
+    <Compile Include="DetailViewController.designer.cs">
+      <DependentUpon>DetailViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\aboutusslideoutbackground1.png" />
+    <BundleResource Include="Resources\aboutusslideoutbackground1%402x.png" />
+    <BundleResource Include="Resources\beginworkoutbuttonclicked1.png" />
+    <BundleResource Include="Resources\beginworkoutbuttonclicked1%402x.png" />
+    <BundleResource Include="Resources\beginworkoutbuttonunclicked1.png" />
+    <BundleResource Include="Resources\beginworkoutbuttonunclicked1%402x.png" />
+    <BundleResource Include="Resources\calmingslideout1.png" />
+    <BundleResource Include="Resources\calmingslideout1%402x.png" />
+    <BundleResource Include="Resources\cancelbutton1.png" />
+    <BundleResource Include="Resources\cancelbutton1%402x.png" />
+    <BundleResource Include="Resources\checkboxunchecked1.png" />
+    <BundleResource Include="Resources\checkboxunchecked1%402x.png" />
+    <BundleResource Include="Resources\checkmark1.png" />
+    <BundleResource Include="Resources\checkmark1%402x.png" />
+    <BundleResource Include="Resources\colorcodedbluebackground1.png" />
+    <BundleResource Include="Resources\colorcodedbluebackground1%402x.png" />
+    <BundleResource Include="Resources\colorcodedgreenopacity1.png" />
+    <BundleResource Include="Resources\colorcodedgreenopacity1%402x.png" />
+    <BundleResource Include="Resources\colorcodedorangebackground1.png" />
+    <BundleResource Include="Resources\colorcodedorangebackground1%402x.png" />
+    <BundleResource Include="Resources\colorcodedredopacity1.png" />
+    <BundleResource Include="Resources\colorcodedredopacity1%402x.png" />
+    <BundleResource Include="Resources\contactusslideout1.png" />
+    <BundleResource Include="Resources\contactusslideout1%402x.png" />
+    <BundleResource Include="Resources\deletefavoritescreen1.png" />
+    <BundleResource Include="Resources\deletefavoritescreen1%402x.png" />
+    <BundleResource Include="Resources\deleteflowbutton1.png" />
+    <BundleResource Include="Resources\deleteflowbutton1%402x.png" />
+    <BundleResource Include="Resources\deleteflowslidedownconfirmation1.png" />
+    <BundleResource Include="Resources\deleteflowslidedownconfirmation1%402x.png" />
+    <BundleResource Include="Resources\donebuttonoff1.png" />
+    <BundleResource Include="Resources\donebuttonoff1%402x.png" />
+    <BundleResource Include="Resources\donebuttonon1.png" />
+    <BundleResource Include="Resources\donebuttonon1%402x.png" />
+    <BundleResource Include="Resources\editfavoritespencilicon1.png" />
+    <BundleResource Include="Resources\editfavoritespencilicon1%402x.png" />
+    <BundleResource Include="Resources\enterflownameboxunclicked1.png" />
+    <BundleResource Include="Resources\enterflownameslidedown1.png" />
+    <BundleResource Include="Resources\enterflownameslidedown1%402x.png" />
+    <BundleResource Include="Resources\enterflownametextboxclicked1%402x.png" />
+    <BundleResource Include="Resources\enterflownametextboxunclicked1%402x.png" />
+    <BundleResource Include="Resources\enterflowtextboxclicked1.png" />
+    <BundleResource Include="Resources\explorecardcalming1.png" />
+    <BundleResource Include="Resources\explorecardcalming1%402x.png" />
+    <BundleResource Include="Resources\explorecardfocus1.png" />
+    <BundleResource Include="Resources\explorecardfocus1%402x.png" />
+    <BundleResource Include="Resources\explorecardstrength1.png" />
+    <BundleResource Include="Resources\explorecardstrength1%402x.png" />
+    <BundleResource Include="Resources\explorecardwarmup1.png" />
+    <BundleResource Include="Resources\explorecardwarmup1%402x.png" />
+    <BundleResource Include="Resources\favoriteboxfilledblue1.png" />
+    <BundleResource Include="Resources\favoriteboxfilledblue1%402x.png" />
+    <BundleResource Include="Resources\favoriteboxfilledgreen1.png" />
+    <BundleResource Include="Resources\favoriteboxfilledgreen1%402x.png" />
+    <BundleResource Include="Resources\favoriteboxfilledorange1.png" />
+    <BundleResource Include="Resources\favoriteboxfilledorange1%402x.png" />
+    <BundleResource Include="Resources\favoriteboxfilledred1.png" />
+    <BundleResource Include="Resources\favoriteboxfilledred1%402x.png" />
+    <BundleResource Include="Resources\favoriteflowboxempty1%402x.png" />
+    <BundleResource Include="Resources\favoritflowboxempty1.png" />
+    <BundleResource Include="Resources\flowslideoutfifteen1%402x.png" />
+    <BundleResource Include="Resources\flowslideoutfortyfive1%402x.png" />
+    <BundleResource Include="Resources\flowslideouthour1%402x.png" />
+    <BundleResource Include="Resources\flowslideoutthirty1%402x.png" />
+    <BundleResource Include="Resources\focusslideout1.png" />
+    <BundleResource Include="Resources\focusslideout1%402x.png" />
+    <BundleResource Include="Resources\landingpagebackground1.png" />
+    <BundleResource Include="Resources\landingpagebackground1%402x.png" />
+    <BundleResource Include="Resources\loadingbeforeworkout1.png" />
+    <BundleResource Include="Resources\loadingbeforeworkout1%402x.png" />
+    <BundleResource Include="Resources\loadingscreen1.png" />
+    <BundleResource Include="Resources\loadingscreen1%402x.png" />
+    <BundleResource Include="Resources\previewbutton1.png" />
+    <BundleResource Include="Resources\previewbutton1%402x.png" />
+    <BundleResource Include="Resources\redcancelbutton1.png" />
+    <BundleResource Include="Resources\redcancelbutton1%402x.png" />
+    <BundleResource Include="Resources\saveflowbutton1.png" />
+    <BundleResource Include="Resources\saveflowbutton1%402x.png" />
+    <BundleResource Include="Resources\slidedownopacityscreen1.png" />
+    <BundleResource Include="Resources\slidedownopacityscreen1%402x.png" />
+    <BundleResource Include="Resources\startflowbutton1.png" />
+    <BundleResource Include="Resources\startflowbutton1%402x.png" />
+    <BundleResource Include="Resources\startsaveclidedown1%402x.png" />
+    <BundleResource Include="Resources\startsaveslidedown1.png" />
+    <BundleResource Include="Resources\strengthslideout1.png" />
+    <BundleResource Include="Resources\strengthslideout1%402x.png" />
+    <BundleResource Include="Resources\tabselectedrollover1.png" />
+    <BundleResource Include="Resources\tabselectedrollover1%402x.png" />
+    <BundleResource Include="Resources\videoselected11.png" />
+    <BundleResource Include="Resources\videoselected11%402x.png" />
+    <BundleResource Include="Resources\videoselected21.png" />
+    <BundleResource Include="Resources\videoselected21%402x.png" />
+    <BundleResource Include="Resources\videoselected31.png" />
+    <BundleResource Include="Resources\videoselected31%402x.png" />
+    <BundleResource Include="Resources\videoselected41.png" />
+    <BundleResource Include="Resources\videoselected41%402x.png" />
+    <BundleResource Include="Resources\warmupslideout1.png" />
+    <BundleResource Include="Resources\warmupslideout1%402x.png" />
+    <BundleResource Include="Resources\whitecloseicon1.png" />
+    <BundleResource Include="Resources\whitecloseicon1%402x.png" />
+    <BundleResource Include="Resources\YBDicon1024x1024.png" />
+    <BundleResource Include="Resources\yourflowfifteen1.png" />
+    <BundleResource Include="Resources\yourflowfifteen1%402x.png" />
+    <BundleResource Include="Resources\yourflowfortyfive1.png" />
+    <BundleResource Include="Resources\yourflowfortyfive1%402x.png" />
+    <BundleResource Include="Resources\yourflowonehour1.png" />
+    <BundleResource Include="Resources\yourflowonehour1%402x.png" />
+    <BundleResource Include="Resources\yourflowthirty1.png" />
+    <BundleResource Include="Resources\yourflowthirty1%402x.png" />
+    <BundleResource Include="Resources\loadingscreen11.png" />
+    <BundleResource Include="Resources\loadingscreen11%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\icon-29.png" />
+    <BundleResource Include="Resources\icon-40.png" />
+    <BundleResource Include="Resources\icon-50.png" />
+    <BundleResource Include="Resources\icon-58.png" />
+    <BundleResource Include="Resources\icon-72.png" />
+    <BundleResource Include="Resources\icon-76.png" />
+    <BundleResource Include="Resources\icon-80.png" />
+    <BundleResource Include="Resources\icon-100.png" />
+    <BundleResource Include="Resources\icon-144.png" />
+    <BundleResource Include="Resources\icon-152.png" />
+  </ItemGroup>
+</Project>
